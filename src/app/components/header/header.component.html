@@ -1,0 +1,54 @@
+<div class="headerContainer">
+  <div class="headerLeft">
+    <img
+      class="presidioLogo"
+      src="../../../assets/presidiologo.png"
+      alt="Presidio"
+    />
+  </div>
+  <div class="headerCenter">
+    <span class="headerCenterContent">CONSULTANT PROFILE</span>
+  </div>
+  <div class="headerRight">
+    <mat-icon class="headerRightNotificationIcon" [matMenuTriggerFor]="menu">
+        notifications
+    </mat-icon>
+    <div class="headerRightContent">Consultant</div>
+    <div class="headerRightLogout">
+      <mat-icon class="headerRightLogoutIcon">logout </mat-icon>
+      <div class="headerRightLogoutContent">Logout</div>
+    </div>
+  </div>
+</div>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+  consectetur quaerat. Consequatur facilis fugit nam velit, omnis enim eos optio
+  consectetur quos mollitia, dolorum beatae cum! Mollitia, dolor exercitationem.
+  Aspernatur!
+</p>
+<div class="footer">
+  <div class="profileDetails">
+    <span class="profileDetail">Basic Info</span>
+    <span class="profileDetail">Executive Summary</span>
+    <span class="profileDetail">Skills overview</span>
+    <span class="profileDetail">Professional Profile</span>
+    <span class="profileDetail">Areas of expertise</span>
+    <span class="profileDetail">Relavant experience</span>
+    <span class="profileDetail">Certifications</span>
+  </div>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>

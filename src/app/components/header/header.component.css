@@ -1,0 +1,113 @@
+.headerContainer {
+  height: 90px;
+  background-color: #0081bc;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 3px 17px #0000002e;
+}
+
+.headerLeft {
+  flex: 3;
+  display: flex;
+  justify-content: space-around;
+}
+.presidioLogo {
+  top: 22px;
+  left: 144px;
+  width: 154px;
+  height: 47px;
+  background: transparent;
+  opacity: 1;
+  cursor: pointer;
+}
+.headerCenter {
+  flex: 6;
+  display: flex;
+  justify-content: space-around;
+}
+.headerCenterContent {
+  top: 31px;
+  left: 803px;
+  width: 314px;
+  height: 29px;
+  color: #fafafa;
+  text-transform: uppercase;
+  letter-spacing: 1.61px;
+  font: normal normal bold 24px/29px Montserrat;
+  text-align: left;
+}
+.headerRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.headerRightNotificationIcon {
+  color: #fafafa;
+  cursor: pointer;
+}
+.headerRightNotificationIcon:hover {
+  opacity: 0.2;
+}
+.headerRightContent {
+  font: normal normal normal 18px/22px Montserrat;
+  letter-spacing: 1.21px;
+  color: #fafafa;
+  opacity: 1;
+}
+
+.headerRightLogout {
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  width: 130px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.headerRightLogout:hover {
+  opacity: 0.3;
+}
+.headerRightLogoutIcon {
+  color: #fafafa;
+  width: 16px;
+  height: 10px;
+}
+.headerRightLogoutContent {
+  color: #fafafa;
+  width: 71px;
+  height: 22px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom:30px;
+}
+
+.profileDetails {
+  width: 90%;
+  height: 64px;
+  display: flex;
+  background-color: #333333;
+  align-items: center;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.profileDetail {
+  width: 80%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fafafa;
+  margin: 10px;
+  font: Montserrat;
+}
+
+.profileDetail:hover {
+  background-color: #5f6062;
+}
