@@ -9,7 +9,7 @@ export class NotificationComponent implements OnInit {
   notifications = [
     {
       message:
-        'Hey Harini, It’s time to update your consultant profile!,Hey Harini, It’s time to update your consultant profile',
+        'Hey Harini, It’s time to update your consultant profile!',
       timestamp: '12:30 PM, 12th Mar 2021',
     },
     {

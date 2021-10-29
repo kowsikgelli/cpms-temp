@@ -1,4 +1,12 @@
 <div class="headerContainer">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over' " (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened" class="hamburger">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened" class="hamburger">
+      close
+    </mat-icon>
+  </button>
   <div class="headerLeft">
     <img
       class="presidioLogo"
@@ -6,9 +14,11 @@
       alt="Presidio"
     />
   </div>
+
   <div class="headerCenter">
     <span class="headerCenterContent">CONSULTANT PROFILE</span>
   </div>
+
   <div class="headerRight">
     <mat-icon
       fontSet="material-icons-outlined"
@@ -19,8 +29,11 @@
     </mat-icon>
     <div class="headerRightContent">Consultant</div>
     <div class="headerRightLogout">
-        <img src="../../../assets/box-arrow-left.png" class="headerRightLogoutIcon" alt="logout">
-      <!-- <mat-icon class="headerRightLogoutIcon">logout </mat-icon> -->
+      <img
+        src="../../../assets/box-arrow-left.png"
+        class="headerRightLogoutIcon"
+        alt="logout"
+      />
       <div class="headerRightLogoutContent">Logout</div>
     </div>
   </div>
@@ -41,3 +54,43 @@
 <mat-menu #menu="matMenu" xPosition="before">
   <app-notification></app-notification>
 </mat-menu>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav">
+    <button mat-button class="sidenavButton" [matMenuTriggerFor]="menu">
+      <span class="sidenavButtonContent">Notifications</span>
+      <mat-icon
+        fontSet="material-icons-outlined"
+        class="headerRightNotificationIcon"
+      >
+        notifications
+      </mat-icon>
+    </button>
+
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Basic info</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Executive Summary</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Skills overview</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Professional profile</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Areas of expertise</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Relavant experience</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <span class="sidenavButtonContent">Certifications</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <mat-icon>logout</mat-icon>
+      <span class="sidenavButtonContent">Logout</span>
+    </button>
+  </mat-sidenav>
+</mat-sidenav-container>

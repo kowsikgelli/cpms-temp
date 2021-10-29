@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import {BreakpointObserver} from '@angular/cdk/layout'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(MatSidenav) sidenav!:MatSidenav;
+  constructor(private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
+  }
+  ngAfterViewInit(){
+    this.observer.observe(['(max-width:800px)']).subscribe((res)=>{
+      if(res.matches){
+        this.sidenav.mode = 'over';
+        
+      }else{
+        this.sidenav.mode = 'side'
+        this.sidenav.close()
+
+      }
+    })
   }
 
 }
