@@ -1,0 +1,43 @@
+.notificationContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 450px;
+  height: 250px;
+  background: #fafafa;
+  box-shadow: 0px 3px 3px #fafafa;
+  border-radius: 5px;
+  padding-left: 13px;
+  padding-right: 20px;
+}
+.notificationContainer::-webkit-scrollbar-thumb {
+  background: #afafaf;
+}
+.notificationContainer::-webkit-scrollbar {
+  width: 3px;
+}
+
+.notificationContainer::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+.notificationMessage {
+  width: 230px;
+  height: 100%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  margin: 10px;
+}
+.notificationMessageContent {
+  font: normal normal Montserrat;
+  font-size: 16px;
+  color: green;
+  margin: 8px;
+}
+.notificationMessageTimestamp {
+  text-align: right;
+  font: normal normal normal 12px/22px Montserrat;
+  letter-spacing: 0px;
+  color: #5f6062;
+  margin-right: 5px;
+}

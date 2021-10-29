@@ -10,22 +10,22 @@
     <span class="headerCenterContent">CONSULTANT PROFILE</span>
   </div>
   <div class="headerRight">
-    <mat-icon class="headerRightNotificationIcon" [matMenuTriggerFor]="menu">
-        notifications
+    <mat-icon
+      fontSet="material-icons-outlined"
+      [matMenuTriggerFor]="menu"
+      class="headerRightNotificationIcon"
+    >
+      notifications
     </mat-icon>
     <div class="headerRightContent">Consultant</div>
     <div class="headerRightLogout">
-      <mat-icon class="headerRightLogoutIcon">logout </mat-icon>
+        <img src="../../../assets/box-arrow-left.png" class="headerRightLogoutIcon" alt="logout">
+      <!-- <mat-icon class="headerRightLogoutIcon">logout </mat-icon> -->
       <div class="headerRightLogoutContent">Logout</div>
     </div>
   </div>
 </div>
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-  consectetur quaerat. Consequatur facilis fugit nam velit, omnis enim eos optio
-  consectetur quos mollitia, dolorum beatae cum! Mollitia, dolor exercitationem.
-  Aspernatur!
-</p>
+
 <div class="footer">
   <div class="profileDetails">
     <span class="profileDetail">Basic Info</span>
@@ -38,17 +38,6 @@
   </div>
 </div>
 
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voice mail</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
-  </button>
+<mat-menu #menu="matMenu" xPosition="before">
+  <app-notification></app-notification>
 </mat-menu>

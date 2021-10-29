@@ -1,1 +1,12 @@
-<p>notification works!</p>
+<div class="notificationContainer">
+  <div *ngFor="let notification of notifications">
+    <div class="notificationMessage">
+      <div class="notificationMessageContent">
+        {{ notification.message }}
+      </div>
+      <div class="notificationMessageTimestamp">
+        {{ notification.timestamp }}
+      </div>
+    </div>
+  </div>
+</div>

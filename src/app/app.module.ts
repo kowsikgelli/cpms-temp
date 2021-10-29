@@ -9,18 +9,14 @@ import { MaterialModule } from './material/material.module';
 import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    NotificationComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, NotificationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
