@@ -1,11 +1,11 @@
 <div class="headerContainer">
-  <button mat-icon-button *ngIf="sidenav.mode === 'over' " (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened" class="hamburger">
-      menu
-    </mat-icon>
-    <mat-icon *ngIf="sidenav.opened" class="hamburger">
-      close
-    </mat-icon>
+  <button
+    mat-icon-button
+    *ngIf="!notificationSidenav.opened"
+    (click)="sidenavMenu.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened" class="hamburger"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened" class="hamburger"> west </mat-icon>
   </button>
   <div class="headerLeft">
     <img
@@ -27,7 +27,7 @@
     >
       notifications
     </mat-icon>
-    <div class="headerRightContent">Consultant</div>
+    <div class="headerRightContent">{{ role }}</div>
     <div class="headerRightLogout">
       <img
         src="../../../assets/box-arrow-left.png"
@@ -37,6 +37,19 @@
       <div class="headerRightLogoutContent">Logout</div>
     </div>
   </div>
+
+  <button
+    mat-icon-button
+    (click)="notificationSidenav.toggle()"
+    *ngIf="!sidenav.opened"
+  >
+    <mat-icon
+      fontSet="material-icons-outlined"
+      class="headerRightMobileNotificationIcon"
+    >
+      notifications
+    </mat-icon>
+  </button>
 </div>
 
 <div class="footer">
@@ -51,22 +64,13 @@
   </div>
 </div>
 
+<!-- notification menu in desktop mode -->
 <mat-menu #menu="matMenu" xPosition="before">
   <app-notification></app-notification>
 </mat-menu>
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav">
-    <button mat-button class="sidenavButton" [matMenuTriggerFor]="menu">
-      <span class="sidenavButtonContent">Notifications</span>
-      <mat-icon
-        fontSet="material-icons-outlined"
-        class="headerRightNotificationIcon"
-      >
-        notifications
-      </mat-icon>
-    </button>
-
+<mat-sidenav-container class="sideMenuContainer">
+  <mat-sidenav class="sideMenu" #sidenavMenu="matSidenav" position="start">
     <button mat-button class="sidenavButton">
       <span class="sidenavButtonContent">Basic info</span>
     </button>
@@ -92,5 +96,12 @@
       <mat-icon>logout</mat-icon>
       <span class="sidenavButtonContent">Logout</span>
     </button>
+  </mat-sidenav>
+  <mat-sidenav
+    class="notificationSideMenu"
+    #notificationSidenav="matSidenav"
+    position="end"
+  >
+    <app-notification-mobile-view></app-notification-mobile-view>
   </mat-sidenav>
 </mat-sidenav-container>
